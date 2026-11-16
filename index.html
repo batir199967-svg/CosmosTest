@@ -1,16 +1,23 @@
+
 <!doctype html>
 <html lang="ru">
-  <meta name="google-site-verification" content="ktGZbj3aNVo-mrfL7-bOlzmYHEcXYT6clqzNJ7sUijs" />
+<head>
   <meta charset="utf-8">
+  <meta name="google-site-verification" content="ktGZbj3aNVo-mrfL7-bOlzmYHEcXYT6clqzNJ7sUijs">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f7f8fa">
   <meta name="description" content="CosmosTest — проверь свои знания астрономии и космоса.">
+
   <title>CosmosTest — проверь знания о космосе</title>
+
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <header class="topbar">
-    <a class="brand" href="#" id="brandHome" aria-label="CosmosTest — на главную"><span class="brand-mark">C</span> CosmosTest</a>
+    <a class="brand" href="#" id="brandHome" aria-label="CosmosTest — на главную">
+      <span class="brand-mark">C</span> CosmosTest
+    </a>
     <span class="top-note">ПРОВЕРКА ЗНАНИЙ · АСТРОНОМИЯ</span>
   </header>
 
@@ -48,8 +55,13 @@
         <button class="back-link" id="quitQuiz">← К уровням</button>
         <span id="quizLevel" class="quiz-level"></span>
       </div>
-      <div class="progress-meta"><span id="questionCounter">ВОПРОС 1 ИЗ 8</span><span id="progressPercent">0%</span></div>
-      <div class="progress-track"><div id="progressBar" class="progress-fill"></div></div>
+      <div class="progress-meta">
+        <span id="questionCounter">ВОПРОС 1 ИЗ 8</span>
+        <span id="progressPercent">0%</span>
+      </div>
+      <div class="progress-track">
+        <div id="progressBar" class="progress-fill"></div>
+      </div>
       <div class="question-card">
         <div class="question-index" id="questionIndex">ВОПРОС 01</div>
         <h2 id="questionText"></h2>
@@ -65,7 +77,12 @@
     <section id="result" class="screen">
       <div class="eyebrow"><span class="dot"></span> ТЕСТ ЗАВЕРШЁН</div>
       <div class="result-card">
-        <div class="result-ring" id="resultRing"><div><strong id="resultPercent">0%</strong><span>РЕЗУЛЬТАТ</span></div></div>
+        <div class="result-ring" id="resultRing">
+          <div>
+            <strong id="resultPercent">0%</strong>
+            <span>РЕЗУЛЬТАТ</span>
+          </div>
+        </div>
         <p class="result-kicker" id="resultLevel"></p>
         <h2 id="resultTitle">Хорошая работа!</h2>
         <p id="resultDescription" class="section-lead"></p>
@@ -92,7 +109,11 @@
     </section>
   </main>
 
-  <footer><span>© 2026 CosmosTest</span><span>СОЗДАНО ДЛЯ ЛЮБОЗНАТЕЛЬНЫХ</span></footer>
+  <footer>
+    <span>© 2026 CosmosTest</span>
+    <span>СОЗДАНО ДЛЯ ЛЮБОЗНАТЕЛЬНЫХ</span>
+  </footer>
+
   <script src="questions.js"></script>
   <script src="app.js"></script>
 </body>
