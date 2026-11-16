@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f8fa">
+  <meta name="description" content="CosmosTest — проверь свои знания астрономии и космоса.">
+  <title>CosmosTest — проверь знания о космосе</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" id="brandHome" aria-label="CosmosTest — на главную"><span class="brand-mark">C</span> CosmosTest</a>
+    <span class="top-note">ПРОВЕРКА ЗНАНИЙ · АСТРОНОМИЯ</span>
+  </header>
+
+  <main class="container">
+    <section id="home" class="screen active">
+      <div class="eyebrow"><span class="dot"></span> ИССЛЕДУЙ ВСЕЛЕННУЮ</div>
+      <h1>Насколько хорошо<br>ты знаешь <span class="accent">космос?</span></h1>
+      <p class="lead">Проверь свои знания — от устройства Солнечной системы до загадок современной космологии.</p>
+      <div class="home-actions">
+        <button class="button primary" id="startButton">Выбрать уровень <span aria-hidden="true">→</span></button>
+        <span class="microcopy">8 уровней · 64 вопроса · результат и разбор</span>
+      </div>
+      <div class="stats-row">
+        <div class="stat"><strong>08</strong><span>уровней</span></div>
+        <div class="stat"><strong>64</strong><span>вопроса</span></div>
+        <div class="stat"><strong>∞</strong><span>любопытства</span></div>
+      </div>
+      <div class="quote-panel">
+        <span class="quote-mark">“</span>
+        <p>Где-то, невообразимо далеко, Вселенная продолжает раскрывать свои секреты.</p>
+        <span class="quote-caption">ТВОЁ ПУТЕШЕСТВИЕ НАЧИНАЕТСЯ ЗДЕСЬ</span>
+      </div>
+    </section>
+
+    <section id="levels" class="screen">
+      <button class="back-link" data-go="home">← На главную</button>
+      <div class="eyebrow">ВЫБОР СЛОЖНОСТИ</div>
+      <h2>Выбери свой уровень</h2>
+      <p class="section-lead">Каждый уровень содержит 8 вопросов. Можно проходить их в любом порядке.</p>
+      <div id="levelGrid" class="level-grid"></div>
+    </section>
+
+    <section id="quiz" class="screen">
+      <div class="quiz-top">
+        <button class="back-link" id="quitQuiz">← К уровням</button>
+        <span id="quizLevel" class="quiz-level"></span>
+      </div>
+      <div class="progress-meta"><span id="questionCounter">ВОПРОС 1 ИЗ 8</span><span id="progressPercent">0%</span></div>
+      <div class="progress-track"><div id="progressBar" class="progress-fill"></div></div>
+      <div class="question-card">
+        <div class="question-index" id="questionIndex">ВОПРОС 01</div>
+        <h2 id="questionText"></h2>
+        <div id="answers" class="answers"></div>
+        <div id="feedback" class="feedback" aria-live="polite"></div>
+        <div class="quiz-footer">
+          <span id="answerHint">Выбери один вариант ответа</span>
+          <button class="button primary" id="nextButton" disabled>Далее →</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="result" class="screen">
+      <div class="eyebrow"><span class="dot"></span> ТЕСТ ЗАВЕРШЁН</div>
+      <div class="result-card">
+        <div class="result-ring" id="resultRing"><div><strong id="resultPercent">0%</strong><span>РЕЗУЛЬТАТ</span></div></div>
+        <p class="result-kicker" id="resultLevel"></p>
+        <h2 id="resultTitle">Хорошая работа!</h2>
+        <p id="resultDescription" class="section-lead"></p>
+        <div class="result-stats">
+          <div><strong id="correctCount">0</strong><span>Правильных</span></div>
+          <div><strong id="wrongCount">0</strong><span>Ошибок</span></div>
+          <div><strong id="totalCount">8</strong><span>Всего</span></div>
+        </div>
+        <div class="result-actions">
+          <button class="button primary" id="reviewButton">Разобрать ответы</button>
+          <button class="button secondary" id="retryButton">Пройти ещё раз</button>
+          <button class="text-button" id="allLevelsButton">Все уровни</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="review" class="screen">
+      <button class="back-link" data-go="result">← К результату</button>
+      <div class="eyebrow">РАЗБОР РЕЗУЛЬТАТОВ</div>
+      <h2>Разберём ответы</h2>
+      <p class="section-lead">Знания растут не только от правильных ответов, но и от понимания ошибок.</p>
+      <div id="reviewList" class="review-list"></div>
+      <button class="button primary review-end" id="reviewDone">Вернуться к результату</button>
+    </section>
+  </main>
+
+  <footer><span>© 2026 CosmosTest</span><span>СОЗДАНО ДЛЯ ЛЮБОЗНАТЕЛЬНЫХ</span></footer>
+  <script src="questions.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
